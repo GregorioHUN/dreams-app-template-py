@@ -1,7 +1,9 @@
 prepare:
   steps:
+    - command: pyenv install 3.10.3
+    - command: pyenv local 3.10.3
     - name: Install dependencies
-      command: pipenv install
+      command: pipenv --python 3.10.3 install
 test:
   steps:
     - name: Empty
